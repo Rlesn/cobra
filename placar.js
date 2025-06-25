@@ -1,6 +1,6 @@
 const placar = {
-    largura:800,
-    altura:60,
+    largura: 800,
+    altura: 60,
     corFundo:"blue",
     corTexto:"white",
     pontuacao:0,
@@ -17,6 +17,6 @@ const placar = {
         ctx.font="14px Fantasy"
         ctx.fillText(this.pontuacao+ " ponto(s)",10,3*this.altura/4);
         ctx.textAlign="right";
-        ctx.fillText(" vida(s)",this.largura-10,3*this.altura/4);
+        ctx.fillText(cobra.vida + " vida(s)",this.largura-10,3*this.altura/4);
     }
 }
