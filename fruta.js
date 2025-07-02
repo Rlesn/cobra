@@ -1,9 +1,13 @@
-class Fruta{
+class Fruta extends ObjetoJogo {
     arqimagem="fruta.png";
     imagem;
-    desenhar(){
+    constructor(valor,...args){
+        super(args);
+        this.valor=valor;
         this.imagem = new Image();
         this.imagem.src =this.arqimagem;
-        ctx.drawImage(this.imagem,500,300,20,20)
+    };
+    desenhar(){
+        ctx.drawImage(this.imagem,this.x,this.y, this.tamanho ,this.tamanho);
     }
 }

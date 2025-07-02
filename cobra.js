@@ -1,7 +1,7 @@
 const cobra = {
     tamanho:10,
     cor: "black",
-    velocidade:10,
+    velocidade:5,
     direcao:"direita",
     x:400,
     y:260,
@@ -11,10 +11,10 @@ const cobra = {
         ctx.fillRect(this.x,this.y,this.tamanho,this.tamanho);
     },
     mover(){
-        if (this.direcao=="direita") this.x++;
-        if (this.direcao=="esquerda") this.x--;
-        if (this.direcao=="baixo") this.y++;
-        if (this.direcao=="cima") this.y--;
+        if (this.direcao=="direita") this.x=this.x+this.velocidade*1;
+        if (this.direcao=="esquerda") this.x=this.x-this.velocidade*1;;
+        if (this.direcao=="baixo") this.y=this.y+this.velocidade*1;;
+        if (this.direcao=="cima") this.y=this.y-this.velocidade*1;;
         console.log(this.x);
         if ((this.y <60)|| (this.y > 450)) this.morrer();
         if((this.x < 0)|| (this.x > 790)) this.morrer();
